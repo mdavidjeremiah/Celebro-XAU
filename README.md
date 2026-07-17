@@ -6,9 +6,9 @@
 
 ## Files
 
-- `XAU_MicroTick_EA.mq5` — Expert Advisor source.
-- `XAU_MicroTick_Tester.set` — Strategy Tester optimization preset.
-- `XAU_MicroTick_Live_Conservative.set` — conservative preset; live execution remains disarmed.
+- `celebro_microtick_xau.mq5` — Expert Advisor source.
+- `celebro_microtick_xau_tester.set` — Strategy Tester optimization preset.
+- `celebro_microtick_xau_Live_Conservative.set` — conservative preset; live execution remains disarmed.
 
 You may rename the source to `celebro_microtick_xau.mq5` before compiling so the MT5 Navigator displays the chosen EA name.
 
@@ -51,7 +51,7 @@ Broker symbols with suffixes, such as `XAUUSD.a`, are accepted because the EA ch
 ## Validation workflow
 
 1. In Strategy Tester, select **Every tick based on real ticks**.
-2. Load `XAU_MicroTick_Tester.set`.
+2. Load `celebro_microtick_xau_Tester.set`.
 3. Verify the broker's point size, spread behavior, stop level, commission, swap, and trading sessions.
 4. Test across multiple market regimes and reserve unseen dates for out-of-sample evaluation.
 5. Reject configurations with inadequate trade counts, unstable results, excessive drawdown, or dependence on a narrow date range.
@@ -67,7 +67,7 @@ The EA defaults to:
 AllowLiveTrading=false
 ```
 
-For a conservative baseline, load `XAU_MicroTick_Live_Conservative.set`; it also remains disarmed. Review every input first, enable MT5 Algo Trading, and set `AllowLiveTrading=true` manually only after testing. The account holder is solely responsible for broker compatibility and all resulting trades.
+For a conservative baseline, load `celebro_microtick_xau_Live_Conservative.set`; it also remains disarmed. Review every input first, enable MT5 Algo Trading, and set `AllowLiveTrading=true` manually only after testing. The account holder is solely responsible for broker compatibility and all resulting trades.
 
 ## Safety controls
 
